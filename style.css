@@ -1,0 +1,181 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+/* APP BACKGROUND (SOFT GRADIENT) */
+.app {
+  width: 360px;
+  height: 640px;
+  border-radius: 30px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, #0f172a, #020617);
+}
+
+/* APP CARD */
+.app {
+  width: 360px;
+  height: 640px;
+  border-radius: 30px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background: #0b0b15;
+}
+
+/* SUBTLE ANIMATED BORDER */
+.app::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #6c63ff, #00f7ff, #6c63ff);
+  background-size: 200%;
+  animation: borderFlow 8s linear infinite;
+  opacity: 0.6;   /* 🔥 reduces intensity */
+  z-index: -1;
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+/* INNER CONTENT */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* INPUT */
+.input-section {
+  display: flex;
+  gap: 10px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: #020617;
+  color: white;
+}
+
+/* ADD BUTTON (floating style) */
+.input-section button {
+  width: 45px;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #6c63ff, #00f7ff);
+  box-shadow: 0 0 15px #6c63ff;
+  font-size: 18px;
+}
+
+.input-section button:hover {
+  transform: scale(1.1);
+}
+
+/* FILTER TABS */
+.filters {
+  display: flex;
+  margin: 15px 0;
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.filters button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* TASK LIST */
+ul {
+  list-style: none;
+  padding: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* TASK CARD */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #020617;  /* darker */
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* HOVER */
+li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0,255,255,0.3);
+}
+
+/* COMPLETED */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* ACTION BUTTONS */
+li button {
+  margin-left: 5px;
+  border-radius: 8px;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+/* ICON COLORS */
+li button:nth-child(2) {
+  background: #00c853;
+}
+
+li button:nth-child(3) {
+  background: #ff1744;
+}
+
+li button:nth-child(4) {
+  background: #ffab00;
+}
+
+/* SCROLLBAR (modern hidden style) */
+ul::-webkit-scrollbar {
+  width: 5px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+li span {
+  color: #ffffff;   /* force white text */
+  font-weight: 500;
+}
