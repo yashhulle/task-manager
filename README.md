@@ -19,10 +19,6 @@ A modern and responsive Task Manager built using **HTML, CSS, and JavaScript** w
 * CSS3 (Animations, Glassmorphism, Gradient UI)
 * JavaScript (DOM Manipulation, LocalStorage)
 
-## 📸 Preview
-
-(Add screenshot here)
-
 ## ⚙️ How to Run
 
 1. Clone the repository
@@ -30,7 +26,7 @@ A modern and responsive Task Manager built using **HTML, CSS, and JavaScript** w
 
 ## 🌐 Live Demo
 
-(..)
+https://task-manager1-6.netlify.app
 
 ## 📌 Future Improvements
 
